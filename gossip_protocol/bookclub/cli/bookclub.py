@@ -1,4 +1,6 @@
 import click
+import redis
+from member import RedisWrapper
 
 
 @click.command()
@@ -20,6 +22,6 @@ def members():
 @click.command()
 def clean():
     """ Destroys all saved state and cleans up member processes """
-    # flush redis
-    # kill processes
-    pass
+    redis = RedisWrapper()
+    redis.db.flushall()
+    # TODO: kill processes
