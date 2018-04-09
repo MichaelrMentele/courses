@@ -1,17 +1,19 @@
+import json
+import sys
+
 from flask import Flask, render_template
 from flask import request
-import json
 import redis
 
 
-"""
-This flask app every ~10 seconds selects a new 'favorite' book from a
-list. It then stores this favorite book and multicasts it to all of it's
-known peers.
-"""
-app = Flask(__name__)
-app.config['redis_db'] = 0
-app.config['port'] = 5000
+name = sys.argv[1]
+db = sys.argv[2]
+port = sys.argv[3]
+
+app = Flask(name)
+app.config['redis_db'] = int(db)
+app.config['port'] = int(port)
+
 
 def new_favorite_book():
     """ Returns a new random favorite book for this node. """
@@ -56,6 +58,7 @@ def dashboard():
     """
     redis = RedisWrapper(db=app.config['redis_db'])
     node2books = {}
+
     for key in redis.db.keys():
         node2books[key.decode('utf-8')] = redis.db.get(key).decode('utf-8')
     return render_template('dashboard.html', node2books=node2books)

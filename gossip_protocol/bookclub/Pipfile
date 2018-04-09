@@ -7,11 +7,8 @@ name = "pypi"
 
 [packages]
 
-flask = "*"
-redis = "*"
+click = "*"
 
 
 [dev-packages]
 
-ipython = "*"
-ipdb = "*"
