@@ -8,7 +8,10 @@ name = "pypi"
 [packages]
 
 flask = "*"
+redis = "*"
 
 
 [dev-packages]
 
+ipython = "*"
+ipdb = "*"
