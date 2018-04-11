@@ -5,10 +5,6 @@ class AllSeeingEye(object):
     def __init__(self, config={}):
         self.config = config
 
-    def see(response):
-        print('Reporting to Sauron!')
-        raise("Not Implemented")
-
     def all_seeing_eye(self, func):
         """
         Publishes to Sauron log aggregator.
@@ -19,3 +15,7 @@ class AllSeeingEye(object):
             self.see(response)
             return response
         return wrapper
+
+    def see(response):
+        print('Reporting to Sauron!')
+        raise("Not Implemented")
