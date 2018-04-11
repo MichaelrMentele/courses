@@ -13,3 +13,6 @@ requests = "*"
 
 [dev-packages]
 
+faker = "*"
+factory-boy = "*"
+pytest = "*"

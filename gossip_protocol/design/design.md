@@ -69,7 +69,32 @@ Then I want to implement the basic gossip logic in one of the servers and have i
 
 # Iterations
 1. create a single member that posts a new favorite book every 10 seconds
+  - wire up flask member
+  - wire up inclusion of react client
   - flask & apscheduler
 2. create a cli app to onboard new members
   - click
 3. implement gossip logic
+4. how do I test?
+  1. clean up state?
+  2. clean up processes?
+5. Move flask to class based and run app creation through CLI
+
+# (1930)
+I've set up flask. I've added a few endpoints to get the current nodes book. I've added a dashboard to fetch what the node _thinks_ is the favorites of everyone.
+
+Now I'm getting into the multi node problem. So, I should build a simple 'bookclub' CLI app that can help manage this for me.
+
+# (2112)
+1. Okay, I need to move to version 2 of my design in lucid chart. So that it's easier to refactor my data.
+2. It would be great to refactor my codebase as a set of class based views so I can separate things out better.
+3. It'd be great to add some tooling around cleaning up redis and processes through a cli app
+4. It'd be sweet to create a Monitor App that shows 'real time' interactions on teh network, basically everytime a node does something on the network I can publish it to an event app, then have it push updates maybe to a react application???
+![design](design.png)
+
+# April 9 20:00
+![logaggregation](logaggregation.png)
+
+I'm trying to setup of Sauron with a database to store requests within: https://realpython.com/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/
+
+I'm a bit concerned about time at this stage. The way I'd like to proceed is to write unit tests for Sauron's API, the eye, and a simple dashboard that just display an index view of saved requests.
