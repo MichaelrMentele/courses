@@ -12,6 +12,7 @@ requests = "*"
 django = "*"
 factory-boy = "*"
 
+
 [dev-packages]
 
 faker = "*"
@@ -20,3 +21,4 @@ pytest = "*"
 django-extensions = "*"
 ipython = "*"
 ipdb = "*"
+vcrpy = "*"
