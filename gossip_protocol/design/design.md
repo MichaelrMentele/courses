@@ -98,3 +98,6 @@ Now I'm getting into the multi node problem. So, I should build a simple 'bookcl
 I'm trying to setup of Sauron with a database to store requests within: https://realpython.com/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/
 
 I'm a bit concerned about time at this stage. The way I'd like to proceed is to write unit tests for Sauron's API, the eye, and a simple dashboard that just display an index view of saved requests.
+
+# April 10th 18:13
+I'm going to get my test network up first so I can understand my development process. MVP is just a list of requests that happen over time.
