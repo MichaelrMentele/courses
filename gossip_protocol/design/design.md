@@ -101,3 +101,6 @@ I'm a bit concerned about time at this stage. The way I'd like to proceed is to 
 
 # April 10th 18:13
 I'm going to get my test network up first so I can understand my development process. MVP is just a list of requests that happen over time.
+
+# April 11th 1:35
+Just need to work through test stubs in the morning. going to sleep till 7 AM

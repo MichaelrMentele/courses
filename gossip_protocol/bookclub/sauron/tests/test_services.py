@@ -22,4 +22,7 @@ class AllSeeingEyeTest(TestCase):
         eye = AllSeeingEye(config={'path': self.path})
         response = eye.see('some content')
         self.assertEqual(response.status_code, 200)
-        self.assertIn("Seen by the Eye", json.loads(response.content)['message'])
+        self.assertIn(
+            "Seen by the Eye",
+            json.loads(response.content)['message']
+        )

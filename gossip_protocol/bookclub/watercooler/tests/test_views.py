@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.test import Client
 
 from watercooler.models import Member, Gossip
-from sauron.tests.factories import MemberFactory, GossipFactory
+from watercooler.tests.factories import MemberFactory, GossipFactory
 
 
 class MemberViewTest(TestCase):
