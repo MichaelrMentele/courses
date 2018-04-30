@@ -1,8 +1,8 @@
-*/bookclub/static
 *__pycache__*
 *.egg-info
 *.db
 *.sqlite3
 db.sqlite3
-.*
 learn-c-the-hard-way-lectures
+*.pyc
+*.log
