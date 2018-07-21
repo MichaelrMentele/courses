@@ -5,20 +5,20 @@
 
 /**
  * The complete address space of the Hack computer's memory,
- * including RAM and memory-mapped I/O. 
+ * including RAM and memory-mapped I/O.
  * The chip facilitates read and write operations, as follows:
  *     Read:  out(t) = Memory[address(t)](t)
  *     Write: if load(t-1) then Memory[address(t-1)](t) = in(t-1)
- * In words: the chip always outputs the value stored at the memory 
- * location specified by address. If load==1, the in value is loaded 
- * into the memory location specified by address. This value becomes 
+ * In words: the chip always outputs the value stored at the memory
+ * location specified by address. If load==1, the in value is loaded
+ * into the memory location specified by address. This value becomes
  * available through the out output from the next time step onward.
  * Address space rules:
- * Only the upper 16K+8K+1 words of the Memory chip are used. 
- * Access to address>0x6000 is invalid. Access to any address in 
- * the range 0x4000-0x5FFF results in accessing the screen memory 
- * map. Access to address 0x6000 results in accessing the keyboard 
- * memory map. The behavior in these addresses is described in the 
+ * Only the upper 16K+8K+1 words of the Memory chip are used.
+ * Access to address>0x6000 is invalid. Access to any address in
+ * the range 0x4000-0x5FFF results in accessing the screen memory
+ * map. Access to address 0x6000 results in accessing the keyboard
+ * memory map. The behavior in these addresses is described in the
  * Screen and Keyboard chip specifications given in the book.
  */
 
@@ -27,5 +27,48 @@ CHIP Memory {
     OUT out[16];
 
     PARTS:
-    // Put your code here:
+    // Route addressing to the RAM16k, Screen, and Keyboard chips based on
+    // value of the address.
+    // - Keyboard if address is 0x6000 or 110000000000000
+    //   - logically address[0] and address[1] and not address[2-15]
+    // - Screen if address is 0x4000-0x5FFF or 100000000000000-101111111111111
+    //   - logically address[0]
+    // - Memory if address is 0x0000-0x3999 or 000000000000000-011111111111111
+
+    // kbdSelected if 0x6000+
+    And(a=address[0], b=address[1], out=kbdOrBustSelected);
+    Or16(in[0..13]=a[2..15], in[13..16]=0, out=error);
+    Not(in=error, out=keyboardSelected);
+
+    // if less than 0x6000
+    Not(in=kbdOrBustSelected, out=screenOrMemory);
+    Not(in=address[1], out=screenRange);
+    And(a=screenOrMemory, b=screenRange, out=screenSelected);
+
+    // if not one of the options above, must be main mem selected
+    Not(in=screenSelected, out=memorySelected);
+
+    // now, time to enable load based on if the chip is selected
+    And(a=keyboardSelected, b=load, out=loadKeyboard);
+    Keyboard(in=in, load=loadKeyboard, out=keyboardOut);
+
+    And(a=screenSelected, b=load, out=loadScreen);
+    Screen(in=in, address=address[3:15], load=loadScreen, out=screenOut);
+
+    And(a=memorySelected, b=load, out=loadMemory);
+    Ram16k(in=in, address=address[2:15], load=loadMemory, out=memoryOut);
+
+    // pass keyboard out or error ie. 0?
+    DMux16(a=keyboardOut, b=0, sel=keyboardSelected, out=keyboardOrZero);
+
+    // pass screen out or mem out?
+    Dmux16(a=screenOut, b=memoryOut, sel=screenSelected, out=screenOrMemory);
+
+    // pass kbdorzero or screenOrMemory?
+    Or(a=screenSelected, b=memorySelected, out=screenOrMemoryIsSelected);
+    Not(in=screenOrMemoryIsSelected, out=screenNorMemorySelected);
+    Or(a=keyboardSelected, b=screenNorMemorySelected, out=selectFinalOut);
+    Dmux16(a=keyboardOrZero, b=screenOrMemory, sel=selectFinalOut, out=out);
+
+
 }
