@@ -35,40 +35,15 @@ CHIP Memory {
     //   - logically address[0]
     // - Memory if address is 0x0000-0x3999 or 000000000000000-011111111111111
 
-    // kbdSelected if 0x6000+
-    And(a=address[0], b=address[1], out=kbdOrBustSelected);
-    Or16(in[0..13]=a[2..15], in[13..16]=0, out=error);
-    Not(in=error, out=keyboardSelected);
+    Mux4Way16(a=mainMemoryOut, b=mainMemoryOut, c=screenOut, d=keyboardOut, sel=address[13..14], out=out);
+    DMux4Way(in=load, sel=address[13..14], a=mainMemoryLoadA, b=mainMemoryLoadB, c=screenLoad, d=keyboardLoad);
+    // guess we don't need to handle > keyboard? could check with Or(a[0],a[1]) and not Or(a[2..4])
+    
+    // handle RAM accesss
+    Or(a=mainMemoryLoadA, b=mainMemoryLoadB, out=loadMainMemory);
+    RAM16K(in=in, address=address[0..13], load=loadMainMemory, out=mainMemoryOut);
 
-    // if less than 0x6000
-    Not(in=kbdOrBustSelected, out=screenOrMemory);
-    Not(in=address[1], out=screenRange);
-    And(a=screenOrMemory, b=screenRange, out=screenSelected);
-
-    // if not one of the options above, must be main mem selected
-    Not(in=screenSelected, out=memorySelected);
-
-    // now, time to enable load based on if the chip is selected
-    And(a=keyboardSelected, b=load, out=loadKeyboard);
-    Keyboard(in=in, load=loadKeyboard, out=keyboardOut);
-
-    And(a=screenSelected, b=load, out=loadScreen);
-    Screen(in=in, address=address[3:15], load=loadScreen, out=screenOut);
-
-    And(a=memorySelected, b=load, out=loadMemory);
-    Ram16k(in=in, address=address[2:15], load=loadMemory, out=memoryOut);
-
-    // pass keyboard out or error ie. 0?
-    DMux16(a=keyboardOut, b=0, sel=keyboardSelected, out=keyboardOrZero);
-
-    // pass screen out or mem out?
-    Dmux16(a=screenOut, b=memoryOut, sel=screenSelected, out=screenOrMemory);
-
-    // pass kbdorzero or screenOrMemory?
-    Or(a=screenSelected, b=memorySelected, out=screenOrMemoryIsSelected);
-    Not(in=screenOrMemoryIsSelected, out=screenNorMemorySelected);
-    Or(a=keyboardSelected, b=screenNorMemorySelected, out=selectFinalOut);
-    Dmux16(a=keyboardOrZero, b=screenOrMemory, sel=selectFinalOut, out=out);
-
-
+    // handle peripherals access
+    Screen(in=in, address=address[0..12], load=screenLoad, out=screenOut);
+    Keyboard(out=keyboardOut);
 }
