@@ -85,3 +85,49 @@ a demultiplexor distributes an input to a given output
 ## UNIT 1.8
 - you can use Nor instead of Nand to build a computer
 - there are other possibilities as well
+
+# Unit 5
+Time to build the hack CPU
+
+## Unit 5.1: 
+- universal turing machine (can compute anything)
+- von neumann architecture
+    - stored program computer
+- cpu
+    - ALU (arthmetic logic unit)
+    - registers
+- memory has data and program data
+- types of information
+    - control (what to do)
+    - address (what are we accessing now)
+    - data (what we work on)
+- ALU
+    - needs control bus access
+    - and data for input
+- registers
+    - move data in/out
+    - addresses stored in registers
+- memory
+    - takes data and addresses -- like the registers on steroids
+    - has data memory
+        - store data
+    - program memory
+        - address the program
+        - feed program data into control bus
+
+## Unit 5.2: Fetch-execute-cycle
+- harvard architecture segregate data and program memory
+- otherwise multiplex addressing
+
+## Unit 5.3: CPU
+- always start with the abstraction!
+- CPU executes stuff!
+- PC
+    - reset -> 0
+    - if load -> set address to A
+    - else PC++
+    - ??
+
+## Unit 5.4: Hack Computer
+
+

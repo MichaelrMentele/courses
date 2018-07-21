@@ -6,3 +6,4 @@ db.sqlite3
 learn-c-the-hard-way-lectures
 *.pyc
 *.log
+*.hack
