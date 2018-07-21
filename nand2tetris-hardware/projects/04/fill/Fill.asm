@@ -11,74 +11,45 @@
 // "white" in every pixel;
 // the screen should remain fully clear as long as no key is pressed.
 
-  @8192
-  D=A
-  
-  @SCRN_SIZE
-  M=D
-
+        @8192   // Set A register to size of screen memory segment
+        D=A
+        @scrn_sz
+        M=D     // save # bytes to traverse
+(REFRESH)
+        @scrn_ptr // keeps track of where we are in range of scrn_sz
+        M=0
 (LOOP)
-  // Initialize the screen ctr
-  @SCRN_SIZE
-  D=M
-  
-  @SCRN_CTR
-  M=D
+        @KBD
+        D=M     // get value of kbd register
 
-  // current value of kbd word
-  @KBD
-  D=M
+        @WHITE
+        D;JEQ   // goto WHITE if KBD value is 0
 
-  // if KDB is 0, write white
-  @WHITE
-  D;JEQ
-
-  // else write black
-  @BLACK
-  0;JMP
-
-(DRAW)
-  // if offset is <= 0, jmp back to the main LOOP
-  @SCRN_CTR
-  D=M
-
-  @LOOP
-  D;JLE
-
-  // else color, decrement ctr, and continue
-  @SCREEN
-  D=D+A // calculate current pixel addr
-
-  @PIXEL // store ptr to current pixel in screen
-  M=D
-  
-  @COLOR // get the color
-  D=M
-  
-  @PIXEL // assign the current pixel to the color
-  A=M
-  M=D
-
-  @SCRN_CTR
-  M=M-1
-
-  @DRAW
-  0; JMP
-
-(WHITE)
-  // set color to white
-  @COLOR
-  M=0
-
-  @DRAW
-  0; JMP
-
+        @BLACK
+        0;JMP   // else go to black
 
 (BLACK)
-  // Set color to black
-  @COLOR
-  M=-1 // -1 is all 1's
-  
-  @DRAW
-  0; JMP
-  
+        @scrn_ptr
+        D=M
+        @SCREEN
+        A=A+D   // scrn_ptr + screen start in memory == current pixel
+        M=-1    // Black it out (-1) is all 1's
+        @NEXT
+        0;JMP   // start next loop
+(WHITE)
+        @scrn_ptr
+        D=M
+        @SCREEN
+        A=A+D
+        M=0     // Fill with white
+        @NEXT
+        0;JMP
+(NEXT)
+        @scrn_ptr
+        MD=M+1  // Increment the ptr!
+        @scrn_sz
+        D=M-D   // screen size - ptr
+        @REFRESH
+        D;JLE   // refresh ptr if ptr is bigger than screen size
+        @LOOP
+        0;JMP   // else keep going!
