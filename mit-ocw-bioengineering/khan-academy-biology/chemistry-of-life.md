@@ -1,0 +1,45 @@
+groups of the periodic table:
+- columns of periodic table
+- all elements in a column have similar properties because they tend to have the same number of valence electrons
+- group 1 (excepting hyrdrogen) are the alkaline metals
+- what is the octet rule?
+- alkali metals are very reactive, they are shiny and soft
+- group 2 are alkaline earth metals, more stable than alkaline metals but still reactive (easier to lose two electrons than gain 6)
+- group 17 is the halogens and they love to interact with alkali metals
+- the noble gases don't like to react because they are at a stable amount of electrons.
+- who invented the periodic table Dmitri Mendeleev
+- columns are groups and rows are periods that share properties that determine physical state and reactivity
+- what is chemical reactivity? forming bonds with other elements
+- what is the relative atomic mass?
+- is energy release or stored when an electron moves to an outer shell? stored
+- if it moves to an inner shell it releases energy in the form of heat
+- atoms tend to take on the lowest energy most stable configuration
+- shell 1n holds 2 electrons
+- shell 2n holds 8 electrons
+- shell 3n holds 18 electrons
+- what is a valence shell? the outermost shell
+- what is the octet rule? most atoms want 8 electrons in their outermost shell
+- what are the subshell designations?
+- what are the types of bonds?
+  - atoms that want to give and atoms that want to take to become stable, all atoms want to look like a noble gas, these together can form an ionic bond, because one offloads an electron and the other takes one and they are polarized and want to stick together
+  - an ion is a positive or negative element
+  - cation is positive
+  - anion is negative
+  - what is a covalent bond? a covalent bond is where they want to share electrons, this is typical of elements that don't want to give up or give away all of their electrons
+  - a polar coavlent bond is where one side of the molecule is more engative or positive
+  - what is the metalic bond?
+- what is a electronegativy? when you are sharing electrons how badly does the element want to hog the electrons
+- what is electro affinity? how much do you want more electrons
+- what region of the periodic table is most electronegative? why? what about electropositive?
+- what is an intermolecular force?
+- what is an intramolecular force?
+- what is a dipole?
+- what is an electrostatic attraction? what does this have to do with boiling points?
+- what is hydrogen bonding?
+- what is FON?
+- what are london dispersion forces?
+- what is a hyrdrocarbon?
+- what is an electrolyte?
+
+Added questions to brainscape
+---
