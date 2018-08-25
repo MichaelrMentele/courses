@@ -1,0 +1,116 @@
+# Module 1: Whole Genome Analysis
+- karyotyping is a kind of whole genome analysis with low resolution
+- cytogenomic arrays for large deletions/dups
+- now base level resolution!!!
+- de novo alignment?
+- problem: reads too short with NGS
+- use the reference sequence to compare against
+    - no true 'normal' or control genome
+    - ref still has holes !!! wow
+- whole exome sequencing
+    - 2% of dna comes from dna in genes, wow!
+    - create short synthetic strands complementary to exons
+    - extract exons from beads
+    - exome == all exons
+- whole exome vs whole genome
+    - less variance in exonic sequence
+    - don't know how to interpret non-coding dna
+    - cheaper to analyze 2%
+    - 85% of mutations for mendelian disorders occur in exome
+- whole exome sequencing (WES)
+    - detects SNPs
+    - read depth!!!!!
+
+# Module 2: Clinical Interpretation of Variants
+- 5-10 millions SNPs differ from ref
+    - 40-100k in coding exons
+    - 10-12k are synonymous
+    - 8-11k are non-synomous in 4-5k genes
+- 200-500k indels
+    - 150 in-frame indels in exons
+    - 200-250 cause frameshift mutation
+- 500-1000 CNVs > 1000 bp
+- annotation of vairant
+    - gene name
+    - chromosome location
+    - where in mRNA/cDNA
+    - location of amino acid in protein
+    - effect on protein
+- advanced annotation
+    - variant dependent methods
+    - disease dependent method
+    - is this a common variant? how common?
+        - 1000 genomes 
+        - dbSNP
+        - etc...
+    - can be common but not phenotypically expressed
+- probably damaging
+    - stop-loss
+    - stop-gained
+    - frameshift
+    - splice disruptor
+- possibly damaging
+    - non-synonymous
+    - in frame in/del
+- likely ok
+    - 5'/3' UTR
+    - synonymous
+    - intergenic
+    - intronic
+    - non-coding genes
+- evolutionary conservation?
+    - if conserved, it's likely if something is changed it's bad...
+- protein structure?
+- amino acid properties?
+- software trying to assess how damaging...
+- in vitro (cell-based assays)
+- in vivo (animal models)
+- association of gene with disease
+    - omim
+    - clinvar
+    - HGV
+- gene in a disease pathway?
+- typical classification scheme
+    - known pathogentic
+    - likely pathogentic
+    - VUS
+    - likely benign
+    - known benign
+
+# Module 3: NGS for diagnostic Dilemmas
+- diagnostic dilemma/odyssey
+    - testing with mis-diagnosis
+- defnitive diagnosis
+- trio analysis
+    - devastating disease often new mutation
+    - you can filter down until its autosomal inheritance vs. new mutation
+- whole genome seq for unexplained disease
+    - often new genome
+    - sometimes union of two diseases!
+        - hard to diagnose
+- WES discovering novel sisease causing genes
+- WGS expected to do the same
+    - things in non-coding regions
+
+# Module 4: Practical Aspects
+- incidentalome??
+    - finding unanticipated pathogentic variants
+        - not associated with disease we are looking into
+    - what should be acted upon?
+        - fortunate discovery vs. false alarms?
+    - penetrance? 
+        - can you carry but not develop the disease?
+    - American College of Med Genetics has recommendations
+- where to get WES?
+    - NIH undiagnosed disease program
+    - manuy commercial options
+    - I want this!!!
+- informed consent
+    - scope/description
+    - benefits
+    - risks
+    - confidentiality
+- patients should know
+    - there will be unknowns!
+    - the field is new!
+    - relevant to family, findings may be found

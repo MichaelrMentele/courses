@@ -1,0 +1,82 @@
+# M1: Cancer bio
+- mortality 50%
+- second leading cause of death
+- 1 in 3 affected
+- cancer is a genetic disease
+- usually happens in cancer first
+- biology of cancer
+    - mitosis regulated by cell cycle controllers, growth factors, and receptors that induce or inhibit proliferations
+    - cancer bypass growth signalling and lose growth control
+    - multiplies uncontrollably
+        - metastisize means it migrates to other parts of the body
+- cancer is a genetic disease
+    - loss of growth control due to mutations in the DNA
+    - damage is repaired by dna enzymes
+    - happens in division
+- cancer genes
+    - oncogenes
+        - proto-oncogenes
+        - normal involved in cell cycle signals
+        - on switch for division
+        - proto-oncogenes -> oncogenes
+            - gain a function to bypass the signalling process
+        - why don' we engineer humans to be immune to cancer? include a backup system
+    - DNA repair
+        - excision repair
+        - recombinational repair
+        - mismatch repair
+    - tumor suppressors
+        - slow cell growth
+        - off switch
+        - signal apoptosis
+    - chromatin modifiers (epigentics)
+        - mutations in epigentic machinery
+        - methylation turns off gene
+        - global hypomethylation
+        - promoter-specific hypermethlyation
+- model of carcinogensesis
+    - driver mutations
+    - multi stage
+    - cascade effect
+    - multi-year process
+- tumor not homegenous
+    - mutations accumulate and diverge
+
+# M2: hereditary cancer
+- heritiability tracked by familial recurrence risk
+- tumors in same organ
+- hereditary breast cancer
+    - 5-10% hereditary
+    - complex disease
+    - BRCA1/2, breast and ovarian cancer
+    - 50% unexplained
+- knudson's 2 hit hypothesis tumor suppression
+    - sporadic cancer, both genes mutated, more unlikely
+    - inherited born with one gene mutated
+
+# M3: Tumor genetic landscape
+- resources:
+    - cancergenome
+    - cosmic database
+    - cancer genome atlas
+- characteristic
+    - 33-66 genes mutated in solid tumors
+    - mostly SNPs
+    - varies by cancer types
+- driver mutations
+    - common mutation frequencies
+    - many passenger mutations
+    - mutation patterns
+- 3300 tumors sequences
+- 125 mutation dirver genese identified
+- 71 tumor suppressor genes
+- 54 oncogenes
+- metastatic disease
+    - brain
+    - liver
+    - lung
+    - lymph
+    - 90% of cancer deaths metastatic
+
+# M4: Clinical applications
+- molcular markers to classify cancers

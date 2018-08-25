@@ -1,0 +1,149 @@
+# Module 2: Genetic Testing for Mendellian Diseases
+- testing accross the life span
+    - pre-conception
+    - prenatal
+    - newborns
+    - children
+    - adults
+- direct targeted sequencing (>100 bp)
+    - single gene
+    - panels
+    - SNP genotyping
+- whole genome sequencing
+    - whole exome sequencing
+    - whole genome woot woot!
+    - cytogenomic array to scan for CNVs 
+- use primers to amplify regions
+- how do we catch dup/del?
+- protect children's autonomy
+    - don't tell for inactionable genetic disease for adult onset
+    - genetic testing for carrier status should be defferred
+- finding tests: genetests, genetic registry, eurogentests
+
+# Module 3: Newborn Screening
+- criteria
+    - important health problem
+    - early onset where intervention matters
+    - cost effective to intervene
+- ex: PKU
+    - deficiency of phenylanlanine can't change to tyrosine
+    - pre screening eliminate disabilities
+    - if not treated leads to retardation
+- mostly phontype based
+    - deafness, cystic fibrosis, hypothyroidism, galactosemia...
+    - fatty acid  disorders, organic acid, amino acid disorders by Tandem Mass spectroscopy (single test to shotgun many disorders)
+    - congenital adrenal hyperplasia (that's me)
+- scope
+    - 31 core disorders and 26 secondary disorders
+    - all states screening more than 30
+- massive success
+    - nearly all 4 million babies are screened
+    - 12k are positive (0.3%)
+    - every $1 spent on screening saves $10-20 (wow!) by averting medical costs
+- future
+    - more disorders?
+    - criteria for utility?
+    - how to bring in DNA seq and screening
+
+# Model 4: Carrier Testing
+- approaches
+    - prenatal first half of prego
+- guidelines
+    - ACOG and ACMG
+        - some guidelines different
+- find asymptomatic carriers
+    - who pays?
+    - who decides?
+- usually heterozygote carriers
+    - most are autosomal recessive disorders
+    - males and female equally affected
+    - 1/4 chance for children whose parents who are carriers
+- ethinicity based screening
+    - frequency of diorders varies among groups
+    - ashkenazi jewish, Tay Sachs disease...
+    - Fr canadian
+    - African, mediterranean etc.
+    - problematics, less robust with multiculturism
+- Tay Sachs disease
+    - lysosomal storage disease
+    - progressive neurodegeneration, no treatment or cure
+    - one of first public health genetic programe
+    - enzyme assay vs DNA
+        - enzyme testing is better in this case
+- Cystic Fibrosis
+    - recommended, 1/25 is a carrier!!!
+    - most common autosomal recessive disorder
+    - CFTR has mutation
+        - defective chloride transport, mucus buildup
+    - pulmonary disease
+    - 2000 genes identified... wowow
+    - not well known/classified in asian and african
+    - lot's of VUS... rare mutations hard to interpret, lack of data
+        - note: data here seems really hard to collect..., we need every to get sequenced!!!
+- Fragile X Syndrome
+    - common form of retardation (one of the most common)
+    - autism 1/4000 males
+    - 1/150 women carry this
+    - population screening not recommended
+        - hotly debated
+    - genetic counsyling complicated
+    - FMR1 has premutation can expand to full mutation
+        - copy number
+        - fuzzy line for have it or don't
+- multiplex screening allows testing
+    - cheap
+    - offer to everyone!?
+        - cost effective
+        - universal screening
+    - cons
+        - 35% will have findings, need to screen partner
+- trend -> broad spectrum screening and universal panels
+    - decrease risk
+- purpose of prenatal screening is to fulfill reproductive goals for a couple
+
+# Prenatal Diagnosis
+- MIT tech review (NIPS is cutting edge)
+- screening tests
+    - risk factors: age, biochemical screening, serum?
+    - cell free dna
+    - ultra sound nuchal translucency
+- diagnostic tests
+    - amniocentesis
+- looking for aneuploidy
+- integrated screening
+    - first trimester
+        - PAPP-A
+        - hCG
+        - nuchal translucency
+        - all increased in babies with down
+    - second trimester
+- nuchal translucency
+    - fluid behind neck
+    - more fluid in fetuses with down
+- detection rate has ----> 100% for down with NIPS
+- what is amniocentesis?
+- age increases aneuploides
+- need standards -> ACOG practice guidelines
+    - NOT JUST REcommended on age
+    - available to all
+- women actually see defect as >>> as risk of procedures
+- amniocentesis, put a needle into the uterus, take 10% of fluid from amniotic sack
+    - miscarriage risk
+- chorionic villus sampling (CVS)
+    - take villi from developing placenta
+    - advantage is that test is done earlier
+- cell free dna!
+    - discovered in serum of pregos, pretty amazing
+    - combined with NGS
+    - comes from apoptosis
+    - mostly from the placenta
+    - 10% from fetus in womens maternal plasma
+    - gone within a few hours after delivery
+    - challenges
+        - not enough material
+        - placenta isn't necessarily the same as the fetus genetically
+            - twins where one dies as ex.
+    - no way to tell what is maternal or fetal
+- chromosomal microarray (CMA)
+- what is karyotype?
+    - low resolution of appearance/count of chromosomes

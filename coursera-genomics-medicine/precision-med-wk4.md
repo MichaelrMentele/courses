@@ -1,0 +1,125 @@
+# Module 1: mendelian vs. complex
+- environmental disease
+- genetic diseases
+- some are primarily genetic vs. environment but this is a spectrum
+    - these are 'complex' diseases
+- mendelian
+    - clear inheritance pattern
+        - dominant vs recessive
+        - high penetrance
+- complex
+    - no clear inheritance pattern
+    - phenocopies
+        - non-genetic form of disease
+    - incomplete penetrance
+        - genetic risk not certainty
+        - can be age related with gene risk factors
+    - variable expressivity
+        - makes sense to me, need to understand the actual mechanisms
+    - low penetrance
+    - common diseases, multiple causes
+        - tough to establish causation
+- symptoms of genetic disease
+    - inheritance
+    - early onset
+    - incidence in unlikely sex
+    - absence of known risk factors
+- finding diseases
+    - 70's candidate gene association studies
+        - curious on gene
+        - variations == disease?
+        - on populations
+    - 80's found disease via linkage analysis
+        - genome wide markers
+        - families, multiple generations
+            - co-inheritance for genetic markers
+    - mid 2000's genome wide association study (GWAS)
+        - due to human genome project
+        - now we can use NGS for rare variants
+    - linkage and NGS good for mendelian disease
+    
+
+# M2: GWAS Method
+- common disease due to cuulative effect of low penetrance variants
+- common disease, rare variant -> high penetrance variants
+    - multiple vectors to get to the disease
+- genotyping
+    - 1 million SNPs in one experiment
+    - what is a tag SNP?
+        - common static patterns
+    - genotyping arrays
+- study designs
+    - cohort studies
+        - disease free -> follow over time
+            - those with get disease, who has genetic variant?
+        - problems:
+            - large for rare diseases
+            - follow for a long time to get data
+    - case-control studies
+        - peeps with disease
+        - peeps without
+        - make comparision
+        - more prone to bias/confounding
+            - confounder -> related to genotype and disease not a cause (race/ethnicity)
+                - confounder in diabetes
+            - false positive or negative?
+            - misclassification bias
+                - erroneously classified as controls
+                - genotype status
+                    - error with calling
+    - case control studies are more pront to confounding
+        - harder to match up controls right
+    - observational in nature
+        - can't distribute genotypes :P
+
+# M3: GWAS Analysis
+- statistical testing
+    - is the distribution due to chance?
+- what about how many copies there are?
+- what is a p value mean of 0.05 mean?
+    - less than 5% chance of false positive ie. occurred by random chance
+- the more tests done the lower the p value should be required
+- manhattan plot?
+- true association (true positive)
+    - genotype direct causal
+    - linked to causal variant (indirect)
+- false
+    - by chance
+    - confounding/bias
+- valid association
+    - not due to chance
+    - bias free
+    - reproducible
+
+# M4: GWAS Interpretation
+- calculation of risk
+    - will I get the disease?
+    - calculate from cohort study
+- why don't we have a model?
+- relative risk
+- can we do this for case-control studies?
+    - no
+    - fixed disease and controls
+- can calc odds of disease
+    - similar to absolute risk of disease
+- generalizability (external validity)
+    - study represents population of applciation
+- most GWAS done in eurpeans, can associate generally???
+    - most do generalize, the risk estimate varies
+    - especially for african
+
+# M5: Genetics of Common and Complex Disease
+- as of 2014 1836 publications and 13000 SNPs finding tons of diseases
+- many SNPs associated with diseases
+    - 41 for diabetes explains 60% of variation
+    - 180 loci's for height but only explain %12
+- limitations
+    - common SNPs not tagged
+    - not capturing rare variants
+    - CNVs?
+    - epistatic (gene-gene)
+    - gene environment interaction
+
+# Notes
+- we basically do regression analysis to find genetic factors for disease
+    - so slow and burdensome
