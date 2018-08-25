@@ -1,0 +1,15 @@
+- asking the right question
+    - solution statement
+        - define scope including data sources
+        - define target performance
+        - define context for usage
+        - define how solution is created
+    - diabetes to understand teh features
+    - critical features
+    - select data sources
+    - performance targets
+        - at least match random!
+- thoughtful about your approach
+    - what is thougthful?
+    - clarity of target outcome
+    - clarity fo approach

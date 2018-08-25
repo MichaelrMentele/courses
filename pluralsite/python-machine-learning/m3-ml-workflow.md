@@ -1,0 +1,14 @@
+- ml workflow
+    - an orchestrated and repeatable pattern which systematically transforms and processing information to create a prediction solution
+    - 1. ask the right question
+    - 2. preparing the data
+    - 3. select the algorithm
+    - 4. train the model
+    - 5. test the model
+- guidelines
+    - early steps most important
+    - highly iterative
+    - more data is good
+    - data is never as you need it
+    - be ready to start over
+

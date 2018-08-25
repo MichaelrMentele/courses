@@ -1,0 +1,38 @@
+- examples
+    - email classification as spam
+    - self driving cars
+    - recommendation systems
+- machine learning to me is idiot savants
+- machine learning: building a model from example inputs to make data driven predictions vs. following static program instructions
+- learning
+    - supervised
+        - data highly structured
+        - each example has the answer
+        - use for
+            - value prediction
+            - need data training with answer
+            - model predicts values in new data
+            - glorified regression
+    - unsupervised
+        - user for
+            - identify clusters of data
+            - no answer given
+            - seems useful for data exploration and discovery
+- motivation
+    - explore a new skill
+    - unicorn data scientists!
+        - software dev
+        - math/statistics
+        - subject matter expert
+- python
+    - pandas
+    - numpys
+    - matplotlib
+    - scikit-learn
+        - algos
+        - pre-process
+        ...
+    - jupyter notebook
+        - iterable env
+        - multi language!
+        
