@@ -63,3 +63,24 @@ int main(int argc, char *argv[])
 
     return 0;
 }
+
+// A pointer references the value stored at a memory address it contains.
+// C thinks your whole computer is one massive array of bytes. C puts types and sizes of those types on TOP of your RAM (giant array of memory).
+// When you define an array in c the following happens:
+// 1. define a block of memory for that array
+// 2. point the name to the beggining of that block
+// 3. indexes adds (type size * index) to the base address (the name)
+// A pointer is simply an address pointing into the computers memory with a type so you get the right size of data with it. A pointer gives you raw access to a block of memory.
+// Useful things you can do with pointers:
+// 1. ask OS for a chunk of memory and use pointer to work with it
+// 2. pass big mem blocks to functions with a pointer 
+// 3. take address of a function to use as a dynamic callback
+// 4. scan chunks of memory, converting bytes off of a network socket into data structures or parsing files
+//
+// Lexicon:
+// type *ptr: a pointer of type named ptr
+// *ptr the value of whatever ptr is pointed at
+// *(ptr + i) the value at ptr + i
+// &thing the address of thing
+// type *ptr = &thing: a pointer of type named ptr set to the address of thing
+// ptr++ increment where ptr points
