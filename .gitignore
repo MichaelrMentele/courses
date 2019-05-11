@@ -7,3 +7,5 @@ learn-c-the-hard-way-lectures
 *.pyc
 *.log
 *.hack
+.node_modules
+node_modules
